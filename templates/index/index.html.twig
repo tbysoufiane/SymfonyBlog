@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Index - {{ parent() }}{% endblock %}
+
+{% block body %}
+    <h1 class="display-2">Liste des Bulletins</h1>
+    <a role="button" class="btn btn-warning" href="{{ path('bulletin_generate') }}">Générer Bulletin</a>
+    <a role="button" class="btn btn-primary" href="{{ path('bulletin_create') }}">Créer Bulletin</a>
+    <div id="bulletin-list">
+      {% if pinnedBulletins is defined %}
+        {% for bulletin in pinnedBulletins %}
+          <div class="bulletin alert alert-{{ bulletin.colorCode }}" style="margin-top:20px;">
+            <h2 class="display-5">
+              {% if bulletin.pinned == true %}
+                  <b>{{ bulletin.title }}</b>
+              {% else %}
+                  {{ bulletin.title }}
+              {% endif %}
+            </h2>
+            <p class="h4">{{ bulletin.category|capitalize }}</p>
+            <p>{{ bulletin.content|nl2br }}</p>
+            <p><b>Tags</b>: 
+              {% if bulletin.tags is empty %}
+                <i>Aucun.</i>
+              {% else %}
+                {% for tag in bulletin.tags %}
+                  <a href="{{ path('index_tag', {'tagName' : tag.name}) }}" style="color:black;text-decoration:none">{{ tag.name }}</a>; 
+                {% endfor %}
+              {% endif %}
+            </p>
+            <p class="lead">Publié le {{ bulletin.creationDate|date('d/m/Y \à G:i:s', 'Europe/Paris') }}</p>
+            <a role="button" class="btn btn-primary" href="{{ path('bulletin_display', {'bulletinId' : bulletin.id}) }}">Afficher</a>
+            <a role="button" class="btn btn-warning" href="{{ path('bulletin_update', {'bulletinId' : bulletin.id}) }}">Modifier</a>
+            <a role="button" class="btn btn-danger" href="{{ path('bulletin_delete', {'bulletinId' : bulletin.id}) }}">Supprimer</a>
+            <a role="button" class="btn btn-success" href="{{ path('bulletin_pin', {'bulletinId' : bulletin.id}) }}">Epingler</a>
+        </div>
+        {% endfor %}
+      {% endif %}
+
+      {% for bulletin in bulletins %}
+        <div class="bulletin alert alert-{{ bulletin.colorCode }}" style="margin-top:20px;">
+            <h2 class="display-5">
+              {% if bulletin.pinned == true %}
+                  <b>{{ bulletin.title }}</b>
+              {% else %}
+                  {{ bulletin.title }}
+              {% endif %}
+            </h2>
+            <p class="h4">{{ bulletin.category|capitalize }}</p>
+            <p>{{ bulletin.content|nl2br }}</p>
+            <p><b>Tags</b>: 
+              {% if bulletin.tags is empty %}
+                <i>Aucun.</i>
+              {% else %}
+                {% for tag in bulletin.tags %}
+                  <a href="{{ path('index_tag', {'tagName' : tag.name}) }}" style="color:black;text-decoration:none">{{ tag.name }}</a>; 
+                {% endfor %}
+              {% endif %}
+            </p>
+            <p class="lead">Publié le {{ bulletin.creationDate|date('d/m/Y \à G:i:s', 'Europe/Paris') }}</p>
+            <a role="button" class="btn btn-primary" href="{{ path('bulletin_display', {'bulletinId' : bulletin.id}) }}">Afficher</a>
+            <a role="button" class="btn btn-warning" href="{{ path('bulletin_update', {'bulletinId' : bulletin.id}) }}">Modifier</a>
+            <a role="button" class="btn btn-danger" href="{{ path('bulletin_delete', {'bulletinId' : bulletin.id}) }}">Supprimer</a>
+            <a role="button" class="btn btn-success" href="{{ path('bulletin_pin', {'bulletinId' : bulletin.id}) }}">Epingler</a>
+        </div>
+      {% endfor %}
+    </div>
+{% endblock %}

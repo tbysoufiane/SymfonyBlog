@@ -1,0 +1,494 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cheatsheet - {{ parent() }} {% endblock %}
+
+{% block body %}
+    <h1 class="display-2">Feuille de Triche</h1>
+    <!-- Sommaire -->
+    <div style="margin-bottom:50px;" id="table-of-contents">
+      <ul class="list-group">
+        <li class="list-group-item"><a href="#typography">Typographie</a></li>
+        <li class="list-group-item"><a href="#tables">Tables</a></li>
+        <li class="list-group-item"><a href="#alerts">Alertes</a></li>
+        <li class="list-group-item"><a href="#buttons">Boutons</a></li>
+        <li class="list-group-item"><a href="#list-group">Listes</a></li>
+        <li class="list-group-item"><a href="#pagination">Pagination</a></li>
+      </ul>
+    </div>
+
+    <!-- Section Typography -->
+    <article class="my-3" id="typography" style="padding: 60px 15px 0;">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Typography</h3>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <p class="display-1">Display 1</p>
+        <p class="display-2">Display 2</p>
+        <p class="display-3">Display 3</p>
+        <p class="display-4">Display 4</p>
+        <p class="display-5">Display 5</p>
+        <p class="display-6">Display 6</p>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <p class="h1">Heading 1</p>
+        <p class="h2">Heading 2</p>
+        <p class="h3">Heading 3</p>
+        <p class="h4">Heading 4</p>
+        <p class="h5">Heading 5</p>
+        <p class="h6">Heading 6</p>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <p class="lead">
+          This is a lead paragraph. It stands out from regular paragraphs.
+        </p>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+        <p><del>This line of text is meant to be treated as deleted text.</del></p>
+        <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+        <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+        <p><u>This line of text will render as underlined.</u></p>
+        <p><small>This line of text is meant to be treated as fine print.</small></p>
+        <p><strong>This line rendered as bold text.</strong></p>
+        <p><em>This line rendered as italicized text.</em></p>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <hr>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <blockquote class="blockquote">
+          <p>A well-known quote, contained in a blockquote element.</p>
+          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <ul class="list-unstyled">
+          <li>This is a list.</li>
+          <li>It appears completely unstyled.</li>
+          <li>Structurally, it's still a list.</li>
+          <li>However, this style only applies to immediate child elements.</li>
+          <li>Nested lists:
+            <ul>
+              <li>are unaffected by this style</li>
+              <li>will still show a bullet</li>
+              <li>and have appropriate left margin</li>
+            </ul>
+          </li>
+          <li>This may still come in handy in some situations.</li>
+        </ul>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <ul class="list-inline">
+          <li class="list-inline-item">This is a list item.</li>
+          <li class="list-inline-item">And another one.</li>
+          <li class="list-inline-item">But they're displayed inline.</li>
+        </ul>
+        </div></div>
+
+      </div>
+    </article>
+
+
+
+    <!-- Section Tables -->
+    <article class="my-3" id="tables" style="padding: 60px 15px 0;">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Tables</h3>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+        </table>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <table class="table table-dark table-borderless">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+        </table>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th scope="col">Class</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Default</th>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          
+          <tr class="table-primary">
+            <th scope="row">Primary</th>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr class="table-secondary">
+            <th scope="row">Secondary</th>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr class="table-success">
+            <th scope="row">Success</th>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr class="table-danger">
+            <th scope="row">Danger</th>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr class="table-warning">
+            <th scope="row">Warning</th>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr class="table-info">
+            <th scope="row">Info</th>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">Light</th>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr class="table-dark">
+            <th scope="row">Dark</th>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          </tbody>
+        </table>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <table class="table table-sm table-bordered">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+        </table>
+        </div></div>
+
+      </div>
+    </article>
+
+
+
+    <!-- Section Alerts -->
+    <article class="my-3" id="alerts" style="padding: 60px 15px 0;">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Alerts</h3>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+          A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+          A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+          A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="alert alert-light alert-dismissible fade show" role="alert">
+          A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="alert alert-dark alert-dismissible fade show" role="alert">
+          A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading">Well done!</h4>
+          <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+          <hr>
+          <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+
+
+    <!-- Section Buttons -->
+    <article class="my-3" id="buttons" style="padding: 60px 15px 0;">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Buttons</h3>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+
+        <button type="button" class="btn btn-link">Link</button>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-outline-light">Light</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <button type="button" class="btn btn-primary btn-sm">Small button</button>
+        <button type="button" class="btn btn-primary">Standard button</button>
+        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+        </div></div>
+
+      </div>
+    </article>
+
+
+    <!-- Section Listes -->
+    <article class="my-3" id="list-group" style="padding: 60px 15px 0;">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>List group</h3>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <ul class="list-group">
+          <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">A fourth item</li>
+          <li class="list-group-item">And a fifth one</li>
+        </ul>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">A fourth item</li>
+          <li class="list-group-item">And a fifth one</li>
+        </ul>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
+          
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list group item</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-success">A simple success list group item</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple danger list group item</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-warning">A simple warning list group item</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-info">A simple info list group item</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-light">A simple light list group item</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group item</a>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+
+
+    <!-- Section Pagination -->
+    <article class="my-3" id="pagination" style="padding: 60px 15px 0;">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Pagination</h3>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <nav aria-label="Pagination example">
+          <ul class="pagination pagination-sm">
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+          </ul>
+        </nav>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <nav aria-label="Standard pagination example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">«</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">»</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <nav aria-label="Another pagination example">
+          <ul class="pagination pagination-lg flex-wrap">
+            <li class="page-item disabled">
+              <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+        </div></div>
+
+      </div>
+    </article>
+
+
+
+{% endblock %}
